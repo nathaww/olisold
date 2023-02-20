@@ -46,7 +46,7 @@ const Intropage = () => {
 
     return (
         <div className='overflow-hidden'>
-            <div ref={el => bgIntro = el} className='w-full h-full flex fixed justify-center flex-col items-center z-50 bg-primary'>
+            <div ref={el => bgIntro = el} className='w-full h-full flex absolute inset-0 justify-center flex-col items-center z-50 bg-primary'>
                 <h1 ref={el => textIntro = el} className=' text-5xl font-bold lg:text-6xl z-50 absolute bottom-10 px-2 text-darkSecondary introtext'>Olis Knitting</h1>
                 <div className="containerIntro absolute w-[280px] h-[380px] left-[50%] top-[50%]">
                     <div ref={el => box1 = el} className="block b-1 absolute w-full h-full"></div>
