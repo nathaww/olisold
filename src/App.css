@@ -1,14 +1,13 @@
 @font-face {
   font-family: "Runalto";
-  src: url(../src/assets/Runalto.ttf);
+  src: url(../src/assets/FontsFree-Net-Canela-Regular.ttf);
 }
-.cur :hover {
-  cursor: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg"),
-    2 2;
+.modal {
+  transform: translate(-50%, -50%) !important;
 }
 * {
-  font-family: "Frank Ruhl Libre", serif;
   scroll-behavior: smooth;
+  font-family: "Runalto";
 }
 .introtext {
   font-family: "Runalto";

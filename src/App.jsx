@@ -14,9 +14,9 @@ function App() {
     <div className="App cont">
       <Intropage />
       <Hero />
+      <About />
       <Products />
       <Testimonial />
-      <About />
       <Contact />
       <Footer />
     </div>

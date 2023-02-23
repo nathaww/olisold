@@ -1,25 +1,19 @@
 import React, { useEffect, useRef } from 'react'
 import imgs1 from '../assets/Slider/1.jpg'
-import imgs2 from '../assets/Slider/2.jpg'
-import imgs3 from '../assets/Slider/3.jpg'
 import imgs4 from '../assets/Slider/4.jpg'
-import imgs5 from '../assets/Slider/5.jpg'
-import imgs6 from '../assets/Slider/6.jpg'
-import imgs7 from '../assets/Slider/7.jpg'
 import imgs8 from '../assets/Slider/8.jpg'
-import imgs9 from '../assets/Slider/9.jpg'
-import imgs10 from '../assets/Slider/10.jpg'
-import imgs11 from '../assets/Slider/11.jpg'
 import imgs12 from '../assets/Slider/12.jpg'
 import imgs13 from '../assets/Slider/13.jpg'
-import imgs14 from '../assets/Slider/14.jpg'
-import imgs15 from '../assets/Slider/15.jpg'
 import vector from '../assets/vector.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/src/ScrollTrigger'
+import { useStateContext } from '../contexts/ContexProvider'
+import Detail from './Detail'
 gsap.registerPlugin(ScrollTrigger);
 
 const Products = () => {
+
+    const { productNo, setproductNo, detail, handleDetail } = useStateContext();
 
     let img1 = useRef(null);
     let img2 = useRef(null);
@@ -155,21 +149,21 @@ const Products = () => {
                         <div className="flex justify-center items-center">
                             <img ref={el => img1 = el} src={imgs1} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box1 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
+                        <button ref={el => box1 = el} onClick={() => { setproductNo(0), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
                     </div>
 
                     <div className="relative items-center flex justify-center p-8">
                         <div className="flex justify-center items-center">
                             <img ref={el => img2 = el} src={imgs4} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box2 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
+                        <button ref={el => box2 = el} onClick={() => { setproductNo(1), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
                     </div>
 
                     <div className="relative items-center flex justify-center p-8">
                         <div className="flex justify-center items-center">
                             <img ref={el => img3 = el} src={imgs8} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box3 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
+                        <button ref={el => box3 = el} onClick={() => { setproductNo(2), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
                     </div>
                 </div>
 
@@ -179,21 +173,21 @@ const Products = () => {
                         <div className="flex justify-center items-center">
                             <img ref={el => img4 = el} src={imgs12} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box4 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Peaches</button>
+                        <button ref={el => box4 = el} onClick={() => { setproductNo(3), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Peaches</button>
                     </div>
 
                     <div className="relative items-center flex justify-center p-8">
                         <div className="flex justify-center items-center">
                             <img ref={el => img5 = el} src={imgs13} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box5 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Mercy</button>
+                        <button ref={el => box5 = el} onClick={() => { setproductNo(4), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Mercy</button>
                     </div>
 
                     <div className="relative items-center flex justify-center p-8">
                         <div className="flex justify-center items-center">
                             <img ref={el => img6 = el} src={imgs1} alt="A chair with designed back" role="img" />
                         </div>
-                        <button ref={el => box6 = el} className='absolute w-[70%] py-4 bottom-16 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
+                        <button ref={el => box6 = el} onClick={() => { setproductNo(5), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
                     </div>
 
                     <div className='hidden md:flex lg:flex absolute w-[285px] h-[285px] -right-5 -bottom-5 items-center justify-center p-5 pt-[11rem] pl-36 bg-primary -z-10'>
@@ -202,6 +196,7 @@ const Products = () => {
                     <img className='lg:hidden md:hidden flex absolute right-[.1px] bottom-[.1px] -z-10' src={vector} alt="olis vector" />
                 </div>
             </div>
+            {detail && <Detail />}
         </div>
     )
 }

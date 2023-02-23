@@ -2,39 +2,51 @@ import React from 'react'
 
 const Testimonial = () => {
   return (
-    <section className="text-gray-600 bg-white body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap -m-4">
-          <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div className="h-full text-center">
-              <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302"/>
-                <p className="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-                <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-                <p className="text-gray-500">Senior Product Designer</p>
-            </div>
+    <section>
+      <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+        <div class="grid grid-cols-1 gap-24 lg:grid-cols-2">
+          <div class="flex flex-col w-full max-w-lg mb-12 text-center lg:mx-auto">
+            <img alt="testimonial" class="inline-block object-cover object-center w-20 h-20 mx-auto mb-8 rounded-full" src="/assets/images/avatar.png" />
+            <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <h2 class="mt-4 text-xs font-semibold tracking-widest text-blue-500 uppercase">
+              Wicked Labs
+              <span href="#" class="font-semibold text-gray-200 lg:mb-0">Acme's HR </span>
+            </h2>
           </div>
-          <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div className="h-full text-center">
-              <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300"/>
-                <p className="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-                <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
-                <p className="text-gray-500">UI Develeoper</p>
-            </div>
-          </div>
-          <div className="lg:w-1/3 lg:mb-0 p-4">
-            <div className="h-full text-center">
-              <img alt="testimonial" className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305"/>
-                <p className="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-                <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
-                <p className="text-gray-500">CTO</p>
-            </div>
+          <div class="flex flex-col w-full max-w-lg mb-12 text-center lg:mx-auto">
+            <img alt="testimonial" class="inline-block object-cover object-center w-20 h-20 mx-auto mb-8 rounded-full" src="/assets/images/avatar.png" />
+            <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <h2 class="mt-4 text-xs font-semibold tracking-widest text-blue-500 uppercase">
+              Wicked Labs
+              <span href="#" class="font-semibold text-gray-200 lg:mb-0">Acme's HR </span>
+            </h2>
           </div>
         </div>
       </div>
+      
+      <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
+        <div class="grid grid-cols-1 gap-24 lg:grid-cols-2">
+          <div class="flex flex-col w-full max-w-lg mb-12 text-center lg:mx-auto">
+            <img alt="testimonial" class="inline-block object-cover object-center w-20 h-20 mx-auto mb-8 rounded-full" src="/assets/images/avatar.png" />
+            <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <h2 class="mt-4 text-xs font-semibold tracking-widest text-blue-500 uppercase">
+              Wicked Labs
+              <span href="#" class="font-semibold text-gray-200 lg:mb-0">Acme's HR </span>
+            </h2>
+          </div>
+          <div class="flex flex-col w-full max-w-lg mb-12 text-center lg:mx-auto">
+            <img alt="testimonial" class="inline-block object-cover object-center w-20 h-20 mx-auto mb-8 rounded-full" src="/assets/images/avatar.png" />
+            <p class="mx-auto text-base leading-relaxed text-gray-500">Free and Premium themes, UI Kit's, templates and landing pages built with Tailwind CSS, HTML &amp; Next.js.</p>
+            <h2 class="mt-4 text-xs font-semibold tracking-widest text-blue-500 uppercase">
+              Wicked Labs
+              <span href="#" class="font-semibold text-gray-200 lg:mb-0">Acme's HR </span>
+            </h2>
+          </div>
+        </div>
+      </div>
+
     </section>
+
   )
 }
 
