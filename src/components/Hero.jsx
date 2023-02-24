@@ -44,13 +44,13 @@ const Hero = () => {
     })
 
     return (
-        <section className='bg-primary relative'>
+        <section className='bg-primary relative min-h-screen'>
             <img className='absolute w-full -z-0 bottom-0' src={vectoralt} alt="olis vector" />
             <Navbar />
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-16">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-10">
                 <img ref={el => vector3 = el} className='absolute top-20 left-10 w-22 h-20 hidden md:flex lg:flex xl:flex' src={vector} alt="olis vector" />
 
-                <div className="flex flex-wrap items-center mx-auto max-w-7xl">
+                <div className="flex flex-wrap items-center mx-auto max-w-7xl mb-5">
                     <div className="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
                         <span className="mb-3 text-xs font-bold tracking-widest text-darkPrimary uppercase"> You knit me together </span>
                         <div className='overflow-hidden p-1'>
@@ -76,7 +76,7 @@ const Hero = () => {
 
                         </div>
                     </div>
-                    <div className="w-full lg:max-w-lg lg:w-1/2 flex justify-center rounded-xl">
+                    <div className="w-full lg:max-w-lg lg:w-1/2 flex justify-center rounded-xl mb-5">
                         <div>
                             <div className="relative w-full max-w-lg">
                                 <div className="absolute -top-10 lg:top-0 rounded-full bg-secondary -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
