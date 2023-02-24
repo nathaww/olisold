@@ -44,7 +44,7 @@ const Hero = () => {
     })
 
     return (
-        <section className='bg-primary relative min-h-screen'>
+        <section className='bg-primary relative'>
             <img className='absolute w-full -z-0 bottom-0' src={vectoralt} alt="olis vector" />
             <Navbar />
             <div className="px-4 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-10">
@@ -54,17 +54,17 @@ const Hero = () => {
                     <div className="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
                         <span className="mb-3 text-xs font-bold tracking-widest text-darkPrimary uppercase"> You knit me together </span>
                         <div className='overflow-hidden p-1'>
-                            <h1 ref={el => h1 = el} className="text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
+                            <h1 ref={el => h1 = el} className=" text-5xl sm:text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
                                 Find The Best
                             </h1>
                         </div>
                         <div className='overflow-hidden p-1'>
-                            <h1 ref={el => h2 = el} className="text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
+                            <h1 ref={el => h2 = el} className=" text-5xl sm:text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
                                 Fashion Style
                             </h1>
                         </div>
                         <div className='overflow-hidden p-1'>
-                            <h1 ref={el => h3 = el} className="lg:mb-3 text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
+                            <h1 ref={el => h3 = el} className="lg:mb-3  text-5xl sm:text-6xl font-bold leading-none tracking-tighter text-darkSecondary md:text-7xl lg:text-7xl">
                                 For You
                             </h1>
                         </div>
@@ -79,12 +79,12 @@ const Hero = () => {
                     <div className="w-full lg:max-w-lg lg:w-1/2 flex justify-center rounded-xl mb-5">
                         <div>
                             <div className="relative w-full max-w-lg">
-                                <div className="absolute -top-10 lg:top-0 rounded-full bg-secondary -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                                <div className="absolute rounded-full bg-primary -bottom-12 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animation-delay-4000"></div>
+                                <div className="absolute -top-10 lg:top-0 rounded-full bg-secondary -left-4  w-72 h-56 lg:h-72 mix-blend-multiply filter blur-xl opacity-70"></div>
+                                <div className="absolute rounded-full bg-secondary bottom-0 lg:-bottom-12 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70"></div>
 
                                 <div className="relative py-4">
-                                    <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20' src={vector} alt="" />
-                                    <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20' src={vector} alt="" />
+                                    <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20 z-10' src={vector} alt="" />
+                                    <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20 z-10' src={vector} alt="" />
                                     <video className='rounded-bl-[4rem] w-full' muted autoPlay loop>
                                         <source src={Olisvid2} type="video/mp4" />
                                     </video>

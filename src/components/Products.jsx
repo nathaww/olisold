@@ -15,6 +15,9 @@ const Products = () => {
 
     const { productNo, setproductNo, detail, handleDetail } = useStateContext();
 
+    let h1 = useRef(null);
+    let p = useRef(null);
+    let sec = useRef(null);
     let img1 = useRef(null);
     let img2 = useRef(null);
     let img3 = useRef(null);
@@ -27,177 +30,156 @@ const Products = () => {
     let box4 = useRef(null);
     let box5 = useRef(null);
     let box6 = useRef(null);
+    let bg1 = useRef(null);
+    let bg2 = useRef(null);
+    let bg3 = useRef(null);
+    let bg4 = useRef(null);
+    let bg5 = useRef(null);
+    let bg6 = useRef(null);
 
     useEffect(() => {
         const animation = gsap
             .timeline({
                 scrollTrigger: {
-                    trigger: img1,
+                    trigger: sec,
                     start: 'top center',
-                    toggleActions: 'restart pause none pause',
                     markers: false
                 }
-            }).from(box1, {
-                width: 0,
-                autoAlpha: 0,
+            }).from([h1, p], {
+                y: 40,
                 duration: 1,
                 ease: 'expo.inOut',
-            })
-        animation.timeScale(0.6)
-
-        const animation2 = gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: img2,
-                    start: 'top center',
-                    toggleActions: 'restart pause none pause',
-                    markers: false
-                }
-            }).from(box2, {
-                width: 0,
-                autoAlpha: 0,
+                stagger: .2,
+            }).to([bg1, bg2, bg3], {
+                delay: -.5,
+                height: 0,
                 duration: 1,
                 ease: 'expo.inOut',
-            })
-        animation2.timeScale(0.6)
-
-        const animation3 = gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: img3,
-                    start: 'top center',
-                    toggleActions: 'restart pause none pause',
-                    markers: false
-                }
-            }).from(box3, {
-                width: 0,
+                stagger: .1,
+            }).from([box1, box2, box3], {
+                delay: -0.7,
                 autoAlpha: 0,
                 duration: 1,
-                ease: 'expo.inOut',
+                ease: 'expo.in',
             })
-        animation3.timeScale(0.6)
+        animation.timeScale(0.8)
 
         const animation4 = gsap
             .timeline({
                 scrollTrigger: {
                     trigger: img4,
                     start: 'top center',
-                    toggleActions: 'restart pause none pause',
                     markers: false
                 }
-            }).from(box4, {
-                width: 0,
-                autoAlpha: 0,
+            }).to([bg4, bg5, bg6], {
+                delay: -.5,
+                height: 0,
                 duration: 1,
                 ease: 'expo.inOut',
-            })
-        animation4.timeScale(0.6)
-
-        const animation5 = gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: img5,
-                    start: 'top center',
-                    toggleActions: 'restart pause none pause',
-                    markers: false
-                }
-            }).from(box5, {
-                width: 0,
+                stagger: .1
+            }).from([box4, box5, box6], {
+                delay: -0.7,
                 autoAlpha: 0,
                 duration: 1,
-                ease: 'expo.inOut',
+                ease: 'expo.in',
             })
-        animation5.timeScale(0.6)
-
-        const animation6 = gsap
-            .timeline({
-                scrollTrigger: {
-                    trigger: img6,
-                    start: 'top center',
-                    toggleActions: 'restart pause none pause',
-                    markers: false
-                }
-            }).from(box6, {
-                width: 0,
-                autoAlpha: 0,
-                duration: 1,
-                ease: 'expo.inOut',
-            })
-        animation6.timeScale(0.6)
-
-
+        animation4.timeScale(0.8)
     }, [])
 
 
     return (
-        <div id='products' className="2xl:container 2xl:mx-auto">
+        <section ref={el => sec = el} id='products'>
 
-            <div className="lg:px-20 md:px-6 px-4 md:py-16 py-12">
-                <div>
-                    <h1 className="text-3xl lg:text-4xl font-semibold text-darkSecondary text-center">Products</h1>
-                </div>
+            {detail && <Detail />}
 
-                <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-4">
-
-                    <div className='hidden md:flex lg:flex absolute w-[285px] h-[285px] -left-5 -top-5 bg-primary pb-5 pr-5 p-5 items-start justify-start'>
-                        <img className='flex' src={vector} alt="olis vector" />
-                    </div>
-
-                    <img className='lg:hidden md:hidden flex absolute left-[.1px] top-[.1px]' src={vector} alt="olis vector" />
-
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img1 = el} src={imgs1} alt="A chair with designed back" role="img" />
+            <div className="bg-white py-6 sm:py-8 lg:py-12">
+                <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
+                    <div className="flex flex-col justify-center items-center gap-4 mb-8">
+                        <div className='overflow-hidden'>
+                            <h2 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold">Some of our products</h2>
                         </div>
-                        <button ref={el => box1 = el} onClick={() => { setproductNo(0), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
-                    </div>
-
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img2 = el} src={imgs4} alt="A chair with designed back" role="img" />
+                        <div className='overflow-hidden'>
+                            <p ref={el => p = el} className='text-darkPrimary'>We have you in mind as we make high-end, classy products tailored to your measurements, it’s simply couture with the word beauty imprinted on all our crafter's minds</p>
                         </div>
-                        <button ref={el => box2 = el} onClick={() => { setproductNo(1), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
                     </div>
 
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img3 = el} src={imgs8} alt="A chair with designed back" role="img" />
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
+                        <div>
+                            <div className="group h-96 lg:h-80 lg:mt-6 overflow-hidden flex justify-center relative mb-2 lg:mb-3">
+                                <img ref={el => img1 = el} src={imgs1} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg1 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+
+                                <button ref={el => box1 = el} onClick={() => { setproductNo(0), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
+                            </div>
+
+                            <div>
+                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
+                            </div>
                         </div>
-                        <button ref={el => box3 = el} onClick={() => { setproductNo(2), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
-                    </div>
-                </div>
 
-                <div className="grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-4">
 
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img4 = el} src={imgs12} alt="A chair with designed back" role="img" />
+
+                        <div>
+                            <div className="group h-96  flex justify-center  overflow-hidden relative mb-2 lg:mb-3">
+                                <img ref={el => img2 = el} src={imgs4} alt="Photo by Galina N" className="absolute w-full h-full object-cover object-top group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg2 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box2 = el} onClick={() => { setproductNo(1), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
+                            </div>
+
+                            <div>
+                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
+                            </div>
                         </div>
-                        <button ref={el => box4 = el} onClick={() => { setproductNo(3), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Peaches</button>
-                    </div>
 
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img5 = el} src={imgs13} alt="A chair with designed back" role="img" />
+
+
+                        <div>
+                            <div className="group h-96 lg:h-80 lg:mt-6  flex justify-center  overflow-hidden relative mb-2 lg:mb-3">
+                                <img ref={el => img3 = el} src={imgs8} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:object-bottom group-hover:scale-110 transition duration-500" />
+                                <div ref={el => bg3 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box3 = el} onClick={() => { setproductNo(2), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
+                            </div>
+
+                            <div>
+                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
+                            </div>
                         </div>
-                        <button ref={el => box5 = el} onClick={() => { setproductNo(4), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Mercy</button>
-                    </div>
 
-                    <div className="relative items-center flex justify-center p-8">
-                        <div className="flex justify-center items-center">
-                            <img ref={el => img6 = el} src={imgs1} alt="A chair with designed back" role="img" />
+
+
+                        <div>
+                            <div className="group h-80 mt-4 flex justify-center overflow-hidden relative mb-2 lg:mb-3">
+                                <img ref={el => img4 = el} src={imgs12} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg4 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box4 = el} onClick={() => { setproductNo(3), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
+
+                            </div>
                         </div>
-                        <button ref={el => box6 = el} onClick={() => { setproductNo(5), handleDetail() }} className='absolute w-[70%] py-4 bottom-12 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
-                    </div>
 
-                    <div className='hidden md:flex lg:flex absolute w-[285px] h-[285px] -right-5 -bottom-5 items-center justify-center p-5 pt-[11rem] pl-36 bg-primary -z-10'>
-                        <img className='flex' src={vector} alt="olis vector" />
+
+                        <div>
+                            <div className="group h-96 flex justify-center overflow-hidden relative mb-2 lg:mb-3">
+                                <img ref={el => img5 = el} src={imgs13} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-top group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg5 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box5 = el} onClick={() => { setproductNo(4), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Mimi</button>
+
+                            </div>
+                        </div>
+
+
+
+                        <div>
+                            <div className="group h-80 mt-4  flex justify-center overflow-hidden relative">
+                                <img ref={el => img6 = el} src={imgs1} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg6 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box6 = el} onClick={() => { setproductNo(5), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Beth</button>
+                            </div>
+                        </div>
+
                     </div>
-                    <img className='lg:hidden md:hidden flex absolute right-[.1px] bottom-[.1px] -z-10' src={vector} alt="olis vector" />
                 </div>
             </div>
-            {detail && <Detail />}
-        </div>
+        </section>
     )
 }
 
