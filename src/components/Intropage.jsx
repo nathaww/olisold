@@ -6,54 +6,44 @@ const Intropage = () => {
     let textIntro = useRef(null)
     let bgIntro = useRef(null)
     let box1 = useRef(null)
-    let box2 = useRef(null)
-    let box3 = useRef(null)
-    let box4 = useRef(null)
-    let box5 = useRef(null)
-    let box6 = useRef(null)
-    let box7 = useRef(null)
+    let cont = useRef(null)
 
-    const timeline_intro = gsap.timeline();
+    const timeline_intro = gsap.timeline(
+        {
+            defaults: {
+                ease: 'expo.inOut'
+            }
+        }
+    );
 
     useEffect(() => {
-        timeline_intro.from([box1, box2, box3, box4, box5],
+        timeline_intro.from([box1, textIntro],
             {
                 duration: 1.5,
-                width: 0,
-                ease: 'expo.inOut',
-                stagger: 0.6
-            }), timeline_intro.from([textIntro], {
-                opacity: 0,
-                duration: 1,
-                stagger: 0.4,
-                ease: 'expo.in'
-            }),
-            timeline_intro.to([textIntro], {
-                opacity: 0,
-                duration: 1.5,
-                ease: 'expo.in'
-            }), timeline_intro.to([box1, box2, box3, box4, box5], {
-                width: 0,
+                y: '150%',
+                stagger: 0.3
+            }), timeline_intro.to(box1, {
+                height: 0,
+                duration: 1.8,
+            }), timeline_intro.to([textIntro], {
+                autoAlpha: 0,
                 delay: -1.5,
                 duration: 1.5,
-                ease: 'expo.in'
-            }), timeline_intro.to([bgIntro], {
-                width: 0,
+            }), timeline_intro.to([bgIntro, cont], {
+                height: 0,
+                delay: -1.5,
                 duration: 1.5,
-                ease: 'expo.out'
             })
+        timeline_intro.timeScale(0.6)
     })
 
     return (
         <div className='overflow-hidden'>
-            <div ref={el => bgIntro = el} className='w-full h-full flex fixed inset-0 justify-center flex-col items-center z-50 bg-primary'>
-                <h1 ref={el => textIntro = el} className=' text-4xl font-bold lg:text-5xl z-50 absolute bottom-14 px-2 text-darkSecondary introtext'>Oli's Knitting</h1>
-                <div className="containerIntro absolute w-[280px] h-[380px] left-[50%] top-[50%]">
-                    <div ref={el => box1 = el} className="block b-1 absolute w-full h-full"></div>
-                    <div ref={el => box2 = el} className="block b-2 absolute w-full h-full"></div>
-                    <div ref={el => box3 = el} className="block b-3 absolute w-full h-full"></div>
-                    <div ref={el => box4 = el} className="block b-4 absolute w-full h-full"></div>
-                    <div ref={el => box5 = el} className="block b-5 absolute w-full h-full"></div>
+            <div ref={el => bgIntro = el} className='w-full h-full flex fixed inset-0 justify-center flex-col items-center z-50 bg-darkSecondary'>
+                <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[280px] h-[380px] left-[50%] top-[50%]">
+                    <div ref={el => box1 = el} className=" bg-darkPrimary rounded overflow-hidden absolute w-full h-full -z-10">
+                        <h1 ref={el => textIntro = el} className='font-bold text-7xl z-50 absolute bottom-5 px-2 text-primary introtext'>Oli's Knitting</h1>
+                    </div>
                 </div>
             </div>
         </div>

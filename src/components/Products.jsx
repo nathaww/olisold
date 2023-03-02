@@ -40,6 +40,10 @@ const Products = () => {
     useEffect(() => {
         const animation = gsap
             .timeline({
+                defaults: {
+                    ease: 'expo.inOut',
+                    duration: 1,
+                },
                 scrollTrigger: {
                     trigger: sec,
                     start: 'top center',
@@ -48,42 +52,39 @@ const Products = () => {
             }).from([h1, p], {
                 y: 40,
                 duration: 1,
-                ease: 'expo.inOut',
                 stagger: .2,
             }).to([bg1, bg2, bg3], {
                 delay: -.5,
                 height: 0,
                 duration: 1,
-                ease: 'expo.inOut',
                 stagger: .1,
             }).from([box1, box2, box3], {
                 delay: -0.7,
                 autoAlpha: 0,
                 duration: 1,
-                ease: 'expo.in',
             })
-        animation.timeScale(0.8)
+        // animation.timeScale(0.8)
 
         const animation4 = gsap
             .timeline({
+                defaults: {
+                    ease: 'expo.inOut',
+                    duration: 1,
+                },
                 scrollTrigger: {
                     trigger: img4,
                     start: 'top center',
                     markers: false
                 }
-            }).to([bg4, bg5, bg6], {
+            }).to([bg4, bg5], {
                 delay: -.5,
                 height: 0,
-                duration: 1,
-                ease: 'expo.inOut',
                 stagger: .1
-            }).from([box4, box5, box6], {
+            }).from([box4, box5], {
                 delay: -0.7,
                 autoAlpha: 0,
-                duration: 1,
-                ease: 'expo.in',
             })
-        animation4.timeScale(0.8)
+        // animation4.timeScale(0.8)
     }, [])
 
 
@@ -103,80 +104,58 @@ const Products = () => {
                         </div>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
-                        <div>
-                            <div className="group h-96 lg:h-80 lg:mt-6 overflow-hidden flex justify-center relative mb-2 lg:mb-3">
-                                <img ref={el => img1 = el} src={imgs1} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+                    <div className="flex flex-col lg:flex-row justify-center lg:gap-6 lg:mb-3">
+                        <div className='flex justify-center my-2'>
+                            <div className="group h-[500px] w-[420px] overflow-hidden flex justify-center relative mb-2 lg:mb-3 rounded">
+                                <img ref={el => img1 = el} src={imgs1} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-200" />
                                 <div ref={el => bg1 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
 
-                                <button ref={el => box1 = el} onClick={() => { setproductNo(0), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
-                            </div>
-
-                            <div>
-                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
+                                <button ref={el => box1 = el} onClick={() => { setproductNo(0), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
                             </div>
                         </div>
 
 
-
-                        <div>
-                            <div className="group h-96  flex justify-center  overflow-hidden relative mb-2 lg:mb-3">
-                                <img ref={el => img2 = el} src={imgs4} alt="Photo by Galina N" className="absolute w-full h-full object-cover object-top group-hover:scale-110 transition duration-200" />
+                        <div className='flex justify-center my-2'>
+                            <div className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
+                                <img ref={el => img2 = el} src={imgs4} alt="Photo by Galina N" className="absolute w-full h-full rounded object-cover object-top group-hover:scale-110 transition duration-200" />
                                 <div ref={el => bg2 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
-                                <button ref={el => box2 = el} onClick={() => { setproductNo(1), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
-                            </div>
-
-                            <div>
-                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
+                                <button ref={el => box2 = el} onClick={() => { setproductNo(1), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Josephine</button>
                             </div>
                         </div>
 
 
 
-                        <div>
-                            <div className="group h-96 lg:h-80 lg:mt-6  flex justify-center  overflow-hidden relative mb-2 lg:mb-3">
-                                <img ref={el => img3 = el} src={imgs8} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:object-bottom group-hover:scale-110 transition duration-500" />
+                        <div className='flex justify-center my-2'>
+                            <div className="group h-[500px] w-[420px] flex justify-center  overflow-hidden relative mb-2 lg:mb-3 rounded">
+                                <img ref={el => img3 = el} src={imgs8} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-500" />
                                 <div ref={el => bg3 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
-                                <button ref={el => box3 = el} onClick={() => { setproductNo(2), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
-                            </div>
-
-                            <div>
-                                <div className="text-darkSecondary hover:gray-800 text-xl font-black transition duration-100 mb-1"></div>
-                            </div>
-                        </div>
-
-
-
-                        <div>
-                            <div className="group h-80 mt-4 flex justify-center overflow-hidden relative mb-2 lg:mb-3">
-                                <img ref={el => img4 = el} src={imgs12} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
-                                <div ref={el => bg4 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
-                                <button ref={el => box4 = el} onClick={() => { setproductNo(3), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
-
-                            </div>
-                        </div>
-
-
-                        <div>
-                            <div className="group h-96 flex justify-center overflow-hidden relative mb-2 lg:mb-3">
-                                <img ref={el => img5 = el} src={imgs13} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-top group-hover:scale-110 transition duration-200" />
-                                <div ref={el => bg5 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
-                                <button ref={el => box5 = el} onClick={() => { setproductNo(4), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Mimi</button>
-
-                            </div>
-                        </div>
-
-
-
-                        <div>
-                            <div className="group h-80 mt-4  flex justify-center overflow-hidden relative">
-                                <img ref={el => img6 = el} src={imgs1} alt="Photo by Rachit Tank" className="absolute w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
-                                <div ref={el => bg6 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
-                                <button ref={el => box6 = el} onClick={() => { setproductNo(5), handleDetail() }} className='absolute w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Beth</button>
+                                <button ref={el => box3 = el} onClick={() => { setproductNo(2), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Ruby</button>
                             </div>
                         </div>
 
                     </div>
+
+                    <div className="flex flex-col lg:flex-row justify-center lg:gap-6">
+
+                        <div className='flex justify-center my-2'>
+                            <div className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
+                                <img ref={el => img4 = el} src={imgs12} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg4 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box4 = el} onClick={() => { setproductNo(3), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Lily</button>
+
+                            </div>
+                        </div>
+
+                        <div className='flex justify-center my-2'>
+                            <div className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
+                                <img ref={el => img5 = el} src={imgs13} alt="olis product" className="absolute w-full h-full rounded object-cover object-top group-hover:scale-110 transition duration-200" />
+                                <div ref={el => bg5 = el} className='bg-white absolute inset-0 w-full h-full z-10'></div>
+                                <button ref={el => box5 = el} onClick={() => { setproductNo(4), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Mimi</button>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

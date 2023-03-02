@@ -11,10 +11,10 @@ const Detail = () => {
 
     return (
         <>
-            <div onClick={() => { handleDetail()}} className='fixed z-20 inset-0 bg-[rgba(0,0,0,0.7)]' />
-            <div className='modal transition duration-150 bg-white border-2 border-gray-100 fixed top-[50%] left-[50%] h-[90%] py-4 overflow-scroll  w-[80%] mx-auto z-20'>
+            <div onClick={() => { handleDetail() }} className='fixed z-20 inset-0 bg-[rgba(0,0,0,0.7)]' />
+            <div className='modal transition duration-150 bg-white rounded border-2 border-gray-100 fixed top-[50%] left-[50%] h-[90%] py-4 overflow-scroll  w-[80%] mx-auto z-20'>
 
-                <button onClick={() => { handleDetail(), setproductNo("") }} className='absolute right-10 top-5 font-bold text-2xl'>X</button>
+                <button onClick={() => { handleDetail(), setproductNo("") }} className='absolute top-0 right-0 lg:right-10 md:right-10 md:top-5 lg:top-5 font-bold text-2xl'>X</button>
                 <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
                     <div className="grid md:grid-cols-2 gap-8">
 
@@ -23,28 +23,28 @@ const Detail = () => {
 
                             <div className="flex lg:flex-col order-last lg:order-none gap-1">
 
-                                <div  className=" overflow-hidden cursor-pointer">
+                                <div className=" overflow-hidden cursor-pointer">
 
-                                    <img src={data[productNo]?.Images[0]} alt="img" onClick={(e) => { setselectedImg(0) }} className="w-full h-full object-cover object-center" />
-
-                                </div>
-
-                                <div  className="overflow-hidden cursor-pointer">
-
-                                    <img src={data[productNo]?.Images[1]} alt="img" onClick={(e) => { setselectedImg(1) }} className="w-full h-full object-cover object-center" />
+                                    <img src={data[productNo]?.Images[0]} alt="img" onClick={(e) => { setselectedImg(0) }} className="w-full h-full object-cover object-center rounded" />
 
                                 </div>
 
-                                <div  className="overflow-hidden cursor-pointer">
+                                <div className="overflow-hidden cursor-pointer">
 
-                                    <img src={data[productNo]?.Images[2]} alt="img" onClick={(e) => { setselectedImg(2) }} className="w-full h-full object-cover object-center" />
+                                    <img src={data[productNo]?.Images[1]} alt="img" onClick={(e) => { setselectedImg(1) }} className="w-full h-full object-cover object-center rounded" />
+
+                                </div>
+
+                                <div className="overflow-hidden cursor-pointer">
+
+                                    <img src={data[productNo]?.Images[2]} alt="img" onClick={(e) => { setselectedImg(2) }} className="w-full h-full object-cover object-center rounded" />
 
                                 </div>
 
                             </div>
 
-                            <div className="lg:col-span-4 overflow-hidden relative transition-transform duration-150">
-                                <img src={data[productNo]?.Images[selectedImg]} alt="selected img" className="object-cover object-center" />
+                            <div className="lg:col-span-4 overflow-hidden relative transition-transform duration-150 rounded">
+                                <img src={data[productNo]?.Images[selectedImg]} alt="selected img" className="object-cover object-center rounded" />
                             </div>
                         </div>
 
