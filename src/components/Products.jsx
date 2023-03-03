@@ -4,7 +4,7 @@ import imgs4 from '../assets/Slider/4.jpg'
 import imgs8 from '../assets/Slider/8.jpg'
 import imgs12 from '../assets/Slider/12.jpg'
 import imgs13 from '../assets/Slider/13.jpg'
-import vector from '../assets/vector.png'
+import rect from '../assets/Rectangle 144.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/src/ScrollTrigger'
 import { useStateContext } from '../contexts/ContexProvider'
@@ -76,6 +76,7 @@ const Products = () => {
 
                     <div className="flex flex-col lg:flex-row justify-center lg:gap-6 lg:mb-3">
 
+
                         <div onClick={() => { setproductNo(0), handleDetail() }} className='flex justify-center my-2'>
                             <div ref={el => box1 = el} className="group h-[500px] w-[420px] overflow-hidden flex justify-center relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs1} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-200" />
@@ -114,7 +115,6 @@ const Products = () => {
                                 <button onClick={() => { setproductNo(4), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
                         </div>
-
                     </div>
 
                 </div>

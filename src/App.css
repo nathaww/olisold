@@ -15,11 +15,9 @@
 #scroll-container {
   backface-visibility: hidden;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
-
 .containerIntro {
   transform: translate(-50%, -50%);
 }

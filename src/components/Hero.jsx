@@ -86,9 +86,9 @@ const Hero = () => {
                         <div>
                             <div className="w-full max-w-lg">
                                 <div className="relative">
-                                    <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20 z-10' src={vector} alt="" />
-                                    <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20 z-10' src={vector} alt="" />
-                                    <video className='rounded-bl-[4rem] w-full' muted autoPlay loop>
+                                    <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20' src={vector} alt="" />
+                                    <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20' src={vector} alt="" />
+                                    <video className='rounded-bl-[4rem] w-full' muted autoPlay loop playsinline>
                                         <source src={Olisvid2} type="video/mp4" />
                                     </video>
                                 </div>

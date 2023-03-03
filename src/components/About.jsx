@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import about from '../assets/about.webp'
 import olis from '../assets/oli.jpg'
-import rect from '../assets/Rectangle 144.png'
 import vector from '../assets/vector.png'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/src/ScrollTrigger'

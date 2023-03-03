@@ -24,6 +24,7 @@ const Testimonial = () => {
         }
       }).from(h1, {
         y: 40,
+        autoAlpha: 0,
       })
   }, [])
 
@@ -31,7 +32,7 @@ const Testimonial = () => {
     <section ref={el => sec = el}>
       <div className="container px-5 py-24 mx-auto">
         <div className='overflow-hidden'>
-          <h1 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold mb-8">
+          <h1 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold mb-4">
             What our cutomers had to say
           </h1>
         </div>
