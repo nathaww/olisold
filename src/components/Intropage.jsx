@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import oli from '../assets/olis.png'
 
 const Intropage = () => {
 
@@ -40,9 +41,9 @@ const Intropage = () => {
     return (
         <div className='overflow-hidden'>
             <div ref={el => bgIntro = el} className='w-full h-full flex fixed inset-0 justify-center flex-col items-center z-50 bg-darkSecondary'>
-                <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[280px] h-[380px] left-[50%] top-[50%]">
-                    <div ref={el => box1 = el} className=" bg-darkPrimary rounded overflow-hidden absolute w-full h-full -z-10">
-                        <h1 ref={el => textIntro = el} className='font-bold text-7xl z-50 absolute bottom-5 px-2 text-primary introtext'>Oli's Knitting</h1>
+                <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[280px] h-[280px] left-[50%] top-[50%]">
+                    <div ref={el => box1 = el} className=" bg-[#0C1418] rounded overflow-hidden absolute w-full h-full -z-10 flex justify-center items-center">
+                        <img ref={el => textIntro = el} src={oli} className="object-cover object-center w-full h-full" alt="oli's logo" />
                     </div>
                 </div>
             </div>

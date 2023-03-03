@@ -77,6 +77,20 @@ export const data = [
             img12,
         ]
     },
-    {},
+    {
+        
+    },
     {}
 ]
+
+// Name:- 
+// Pattern type:- 
+// Sleeve length:- 
+// Length:- 
+// Waist:- 
+// stretchy :- 
+// Fit type:- 
+// Fabric:- 
+// Color:- 
+// Type:- 
+// Price :-

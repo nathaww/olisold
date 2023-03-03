@@ -77,8 +77,8 @@ const Hero = () => {
 
                         <div className="mt-3 lg:mt-3 max-w-7xl sm:flex">
                             <a href='#products'
-                                className="items-center rounded px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out shadow-lg transform bg-darkSecondary hover:bg-darkPrimary focus:outline-none focus:ring-2 focus:ring-offset-2">Order
-                                now</a>
+                                className="items-center rounded px-10 py-4 text-base font-medium text-center text-secondary transition duration-500 ease-in-out shadow-lg transform bg-darkSecondary hover:bg-darkPrimary focus:outline-none focus:ring-2 focus:ring-offset-2 z-20">
+                                Order now</a>
                         </div>
 
                     </div>
@@ -86,7 +86,7 @@ const Hero = () => {
                         <div>
                             <div className="relative w-full max-w-lg">
                                 <div
-                                    className=" hidden lg:block absolute -top-10 lg:top-0 rounded-full bg-secondary -left-4 w-72 h-56 lg:h-72 mix-blend-multiply filter blur-xl opacity-70">
+                                    className=" hidden lg:block absolute -top-10 lg:top-0 bg-secondary -left-4 w-72 h-56 lg:h-72 mix-blend-multiply filter blur-xl opacity-70">
                                 </div>
                                 <div
                                     className="absolute bg-secondary bottom-0 lg:-bottom-12 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70">

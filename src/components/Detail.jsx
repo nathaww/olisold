@@ -14,12 +14,11 @@ const Detail = () => {
             <div onClick={() => { handleDetail() }} className='fixed z-20 inset-0 bg-[rgba(0,0,0,0.7)]' />
             <div className='modal transition duration-150 bg-white rounded border-2 border-gray-100 fixed top-[50%] left-[50%] h-[90%] py-4 overflow-scroll  w-[80%] mx-auto z-20'>
 
-                <button onClick={() => { handleDetail(), setproductNo("") }} className='absolute top-0 right-0 lg:right-10 md:right-10 md:top-5 lg:top-5 font-bold text-2xl'>X</button>
-                <div className="max-w-screen-lg px-4 md:px-8 mx-auto">
+                <button onClick={() => { handleDetail(), setproductNo("") }} className='absolute top-3 right-4 lg:right-10 md:right-10 md:top-5 lg:top-5 font-bold text-2xl'>X</button>
+                <div className="max-w-screen-lg px-4 md:px-8 mx-auto mt-6 lg:mt-2">
                     <div className="grid md:grid-cols-2 gap-8">
 
-                        <div className="grid lg:grid-cols-5 gap-4 relative py-1 px-5">
-
+                        <div className="grid lg:grid-cols-5 gap-4 relative py-2 px-5">
 
                             <div className="flex lg:flex-col order-last lg:order-none gap-1">
 
@@ -52,14 +51,14 @@ const Detail = () => {
 
                             <div className="mb-2 md:mb-3">
                                 <span className="inline-block text-gray-500 mb-0.5">Oli's</span>
-                                <h2 className="text-darkSecondary text-2xl lg:text-3xl font-bold">{data[productNo].Name}</h2>
+                                <h2 className="text-darkSecondary text-2xl lg:text-3xl font-bold">{data[productNo].Name || "-"}</h2>
                             </div>
 
                             <div className="mb-4 ">
                                 <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Pattern type</span>
 
                                 <div className="flex flex-wrap">
-                                    <span className="text-gray-600 text-md">{data[productNo].Patterntype}</span>
+                                    <span className="text-gray-700 text-lg">{data[productNo].Patterntype || "-"}</span>
                                 </div>
                             </div>
 
@@ -68,14 +67,14 @@ const Detail = () => {
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Sleeve design</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Sleevedesign}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Sleevedesign || "-"}</span>
                                     </div>
                                 </div>
                                 <div className="mb-4 ">
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Size</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Size}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Size || "-"}</span>
                                     </div>
                                 </div>
                             </div>
@@ -85,14 +84,14 @@ const Detail = () => {
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Fit type</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Fittype}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Fittype || "-"}</span>
                                     </div>
                                 </div>
                                 <div className="mb-4 ">
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Fabric</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Fabric}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Fabric || "-"}</span>
                                     </div>
                                 </div>
                             </div>
@@ -102,14 +101,14 @@ const Detail = () => {
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Color</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Color}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Color || "-"}</span>
                                     </div>
                                 </div>
                                 <div className="mb-4 ">
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Type</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-600 text-md">{data[productNo].Type}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Type || "-"}</span>
                                     </div>
                                 </div>
                             </div>

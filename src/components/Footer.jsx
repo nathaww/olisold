@@ -8,8 +8,11 @@ const Footer = () => {
 
                 <div className="mt-8 md:mt-0 md:order-1 flex justify-center">
                     <span className="mt-2 text-sm font-light text-white">
-                        Copyright © 2021 - 2024
-                        <a href="#" className="mx-2 text-primary hover:text-gray-500" rel="noopener noreferrer">Olis Knitting.</a> Since 2021
+                        Copyright © 2023
+                        <a href="#" className="mx-2 text-primary hover:text-gray-500" rel="noopener noreferrer">Oli's.</a> <br />
+                        <p className='text-center'>
+                            Since 2018
+                        </p>
                     </span>
                 </div>
             </div>
