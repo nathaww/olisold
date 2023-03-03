@@ -84,14 +84,7 @@ const Hero = () => {
                     </div>
                     <div className="w-full lg:max-w-lg lg:w-1/2 flex justify-center rounded-xl mb-5">
                         <div>
-                            <div className="relative w-full max-w-lg">
-                                <div
-                                    className=" hidden lg:block absolute -top-10 lg:top-0 bg-secondary -left-4 w-72 h-56 lg:h-72 mix-blend-multiply filter blur-xl opacity-70">
-                                </div>
-                                <div
-                                    className="absolute bg-secondary bottom-0 lg:-bottom-12 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70">
-                                </div>
-
+                            <div className="w-full max-w-lg">
                                 <div className="relative">
                                     <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20 z-10' src={vector} alt="" />
                                     <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20 z-10' src={vector} alt="" />
