@@ -20,11 +20,13 @@ export const data = [
         Name: "Lily",
         Patterntype: "K1R, P1R and Pom Pom at the edge",
         Sleevedesign: "Baggy sleeve",
-        Size: "M",
+        Length: "",
+        Waist: "",
         Fittype: "Baggy fit",
         Fabric: "Stretchy",
         Color: "Green and white",
         Type: "Handmade",
+        Price: "",
         Images: [
             img1,
             img2,
@@ -34,11 +36,14 @@ export const data = [
     {
         Name: "Josephine",
         Patterntype: "K1R, P1R",
-        Neckline: "Off the shoulder",
-        Sleevelength: "18cm",
-        Fullbodylength: "100cm",
+        Sleevelength: "",
+        Length: "",
+        Waist: "",
         Fittype: "Slim fit",
         Fabric: "Highly stretchy",
+        Color: "",
+        Type: "",
+        Price: "",
         Images: [
             img4,
             img5,
@@ -48,7 +53,6 @@ export const data = [
     {
         Name: "Ruby ",
         Patterntype: "k1p1",
-        Neckline: "optional",
         Sleevelength: "24cm",
         Length: "66cm",
         Waist: "44cm but highly stretchy",
@@ -56,17 +60,29 @@ export const data = [
         Fabric: "Highly stretchy",
         Color: "Red",
         Type: "Handmade",
+        Price: "",
         Images: [
             img7,
             img8,
             img9,
         ]
     },
+    // Name:- 
+    // Pattern type:- 
+    // Sleeve length:- 
+    // Length:- 
+    // Waist:- 
+    // Fit type:- 
+    // Fabric:- 
+    // Color:- 
+    // Type:- 
+    // Price :-
     {
         Name: "Peaches",
         Patterntype: "Seed stitch and k1P1",
         Sleevedesign: "Baggy sleeve with K1P1 pattern and wide scrubby sparkle at the edge of the sleeve",
-        Size: "M & L",
+        Length:"",
+        Waist:"",
         Fittype: "Slim fit",
         Fabric: "Stretchy",
         Color: "Orange and white",
@@ -78,19 +94,6 @@ export const data = [
         ]
     },
     {
-        
-    },
-    {}
-]
 
-// Name:- 
-// Pattern type:- 
-// Sleeve length:- 
-// Length:- 
-// Waist:- 
-// stretchy :- 
-// Fit type:- 
-// Fabric:- 
-// Color:- 
-// Type:- 
-// Price :-
+    },
+]

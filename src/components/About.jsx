@@ -35,14 +35,14 @@ const About = () => {
 
 
   return (
-    <section ref={el => sec = el} className="body-font">
+    <section className="body-font">
       <div className="container mx-auto flex px-5 py-8 sm:py-8 md:py-12 lg:py-24 md:flex-row flex-col items-center">
         <div className="lg:max-w-md lg:w-full md:w-1/2 w-5/6 mb-12 md:mb-0 relative">
           <img src={vector} className="absolute w-24 h-24 -top-2 lg:-top-10 -right-10 -z-10" alt="" />
           <img className="object-cover object-center rounded-tl-[4rem]" alt="logo" src={about} />
           <img src={olis} className="absolute object-cover object-center w-40 h-36 -bottom-10 -left-10 z-10" alt="" />
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <div ref={el => sec = el} className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <div className='overflow-hidden my-4'>
             <h1 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold">A few things about Oli's</h1>
           </div>

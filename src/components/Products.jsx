@@ -76,49 +76,54 @@ const Products = () => {
 
                     <div className="flex flex-col lg:flex-row justify-center lg:gap-6 lg:mb-3">
 
-
-                        <div onClick={() => { setproductNo(0), handleDetail() }} className='flex justify-center my-2'>
+                        <div onClick={() => { setproductNo(0), handleDetail() }} className='flex flex-col justify-center my-2 cursor-pointer'>
                             <div ref={el => box1 = el} className="group h-[500px] w-[420px] overflow-hidden flex justify-center relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs1} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-200" />
-                                <button onClick={() => { setproductNo(0), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
+                            <h1 className='text-darkSecondary font-semibold'>Lily</h1>
+                            <p className='text-gray-600'>This is new</p>
                         </div>
 
-                        <div onClick={() => { setproductNo(1), handleDetail() }} className='flex justify-center my-2'>
+                        <div onClick={() => { setproductNo(1), handleDetail() }} className='flex flex-col justify-center my-2 cursor-pointer'>
                             <div ref={el => box2 = el} className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs4} alt="Photo by Galina N" className="absolute w-full h-full rounded object-cover object-top group-hover:scale-110 transition duration-200" />
-                                <button onClick={() => { setproductNo(1), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
+                            <h1 className='text-darkSecondary font-semibold'>Lily</h1>
+                            <p className='text-gray-600'>This is new</p>
                         </div>
 
-                        <div onClick={() => { setproductNo(2), handleDetail() }} className='flex justify-center my-2'>
+                        <div onClick={() => { setproductNo(2), handleDetail() }} className='flex flex-col justify-center my-2 cursor-pointer'>
                             <div ref={el => box3 = el} className="group h-[500px] w-[420px] flex justify-center  overflow-hidden relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs8} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-500" />
-                                <button onClick={() => { setproductNo(2), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
+                            <h1 className='text-darkSecondary font-semibold'>Lily</h1>
+                            <p className='text-gray-600'>This is new</p>
                         </div>
 
                     </div>
 
                     <div className="flex flex-col lg:flex-row justify-center lg:gap-6">
 
-                        <div onClick={() => { setproductNo(3), handleDetail() }} className='flex justify-center my-2'>
+                        <div onClick={() => { setproductNo(3), handleDetail() }} className='flex flex-col justify-center my-2 cursor-pointer'>
                             <div ref={el => box4 = el} className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs12} alt="olis product" className="absolute w-full h-full rounded object-cover object-center group-hover:scale-110 transition duration-200" />
-                                <button onClick={() => { setproductNo(3), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
+                            <h1 className='text-darkSecondary font-semibold'>Lily</h1>
+                            <p className='text-gray-600'>This is new</p>
                         </div>
 
-                        <div onClick={() => { setproductNo(4), handleDetail() }} className='flex justify-center my-2'>
+                        <div onClick={() => { setproductNo(4), handleDetail() }} className='flex flex-col justify-center my-2 cursor-pointer'>
                             <div ref={el => box5 = el} className="group h-[500px] w-[420px] flex justify-center overflow-hidden relative mb-2 lg:mb-3 rounded">
                                 <img src={imgs13} alt="olis product" className="absolute w-full h-full rounded object-cover object-top group-hover:scale-110 transition duration-200" />
-                                <button onClick={() => { setproductNo(4), handleDetail() }} className='absolute rounded w-[90%] py-4 bottom-2 text-lg font-semibold bg-white text-darkSecondary z-10'>Detail</button>
                             </div>
+                            <h1 className='text-darkSecondary font-semibold'>Lily</h1>
+                            <p className='text-gray-600'>This is new</p>
                         </div>
                     </div>
 
                 </div>
             </div>
+
         </section>
     )
 }

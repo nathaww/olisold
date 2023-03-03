@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { AiFillPhone, AiFillInstagram, AiOutlineMail, AiFillFacebook } from 'react-icons/ai'
+import { AiOutlineWhatsApp, AiFillInstagram, AiOutlineMail, AiFillFacebook } from 'react-icons/ai'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/src/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="grid grid-cols-2 gap-4 mx-auto place-items-stretch h-56">
         <div className='bg-darkSecondary rounded flex items-center justify-center'>
           <a className='text-secondary' href="tel:+251935757519" aria-label="call">
-            <AiFillPhone className="h-8 w-8" />
+            <AiOutlineWhatsApp className="h-8 w-8" />
           </a>
         </div>
         <div className='bg-darkSecondary rounded flex items-center justify-center'>
@@ -47,12 +47,12 @@ const Contact = () => {
           </a>
         </div>
         <div className='bg-darkSecondary rounded flex items-center justify-center'>
-          <a className='text-secondary' href="olis.knitting@gmail.com" aria-label="call">
+          <a className='text-secondary' href="mailto:olis.knitting@gmail.com" aria-label="call">
             <AiOutlineMail className="h-8 w-8" />
           </a>
         </div>
         <div className='bg-darkSecondary rounded flex items-center justify-center'>
-          <a className='text-secondary' href="tel:+251911391392" aria-label="call">
+          <a className='text-secondary' href="https://www.facebook.com/profile.php?id=100081517934598&mibextid=LQQJ4d" aria-label="call">
             <AiFillFacebook className="h-8 w-8" />
           </a>
         </div>
