@@ -19,14 +19,13 @@ export const data = [
     {
         Name: "Lily",
         Patterntype: "K1R, P1R and Pom Pom at the edge",
-        Sleevedesign: "Baggy sleeve",
-        Length: "",
+        Sleevelength: "60cm",
+        Length: "23cm",
         Waist: "",
         Fittype: "Baggy fit",
         Fabric: "Stretchy",
         Color: "Green and white",
         Type: "Handmade",
-        Price: "",
         Images: [
             img1,
             img2,
@@ -36,14 +35,13 @@ export const data = [
     {
         Name: "Josephine",
         Patterntype: "K1R, P1R",
-        Sleevelength: "",
-        Length: "",
-        Waist: "",
+        Sleevelength: "18cm",
+        Length: "100cm",
+        Waist: "66cm",
         Fittype: "Slim fit",
         Fabric: "Highly stretchy",
-        Color: "",
-        Type: "",
-        Price: "",
+        Color: "Variegated",
+        Type: "Handmade",
         Images: [
             img4,
             img5,
@@ -51,7 +49,7 @@ export const data = [
         ]
     },
     {
-        Name: "Ruby ",
+        Name: "Ruby",
         Patterntype: "k1p1",
         Sleevelength: "24cm",
         Length: "66cm",
@@ -60,29 +58,18 @@ export const data = [
         Fabric: "Highly stretchy",
         Color: "Red",
         Type: "Handmade",
-        Price: "",
         Images: [
             img7,
             img8,
             img9,
         ]
     },
-    // Name:- 
-    // Pattern type:- 
-    // Sleeve length:- 
-    // Length:- 
-    // Waist:- 
-    // Fit type:- 
-    // Fabric:- 
-    // Color:- 
-    // Type:- 
-    // Price :-
     {
         Name: "Peaches",
         Patterntype: "Seed stitch and k1P1",
-        Sleevedesign: "Baggy sleeve with K1P1 pattern and wide scrubby sparkle at the edge of the sleeve",
-        Length:"",
-        Waist:"",
+        Sleevelength: "60cm",
+        Length: "58cm",
+        Waist: "66cm",
         Fittype: "Slim fit",
         Fabric: "Stretchy",
         Color: "Orange and white",
@@ -94,6 +81,19 @@ export const data = [
         ]
     },
     {
-
+        Name: "Velvety",
+        Patterntype: " K1R, P1R waist and k1R, P1R ",
+        Sleevelength: "60cm",
+        Length: "111cm",
+        Waist: "Highly stretchy but 26 inch without stretch",
+        Fittype: "Normal fit",
+        Fabric: "velvet yarn",
+        Color: "Black & pink variegated yarn",
+        Type: "Handmade",
+        Images: [
+            img13,
+            img14,
+            img15,
+        ]
     },
 ]

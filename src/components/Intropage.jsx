@@ -41,8 +41,8 @@ const Intropage = () => {
     return (
         <div className='overflow-hidden'>
             <div ref={el => bgIntro = el} className='w-full h-full flex fixed inset-0 justify-center flex-col items-center z-50 bg-darkSecondary'>
-                <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[280px] h-[280px] left-[50%] top-[50%]">
-                    <div ref={el => box1 = el} className=" bg-[#0C1418] rounded overflow-hidden absolute w-full h-full -z-10 flex justify-center items-center">
+                <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[320px] h-[320px] left-[50%] top-[50%]">
+                    <div ref={el => box1 = el} className=" rounded overflow-hidden absolute w-full h-full -z-10 flex justify-center items-center">
                         <img ref={el => textIntro = el} src={oli} className="object-cover object-center w-full h-full" alt="oli's logo" />
                     </div>
                 </div>

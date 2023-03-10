@@ -52,7 +52,7 @@ const Testimonial = () => {
                 Thank you for knitting me together😊</p>
               <a className="inline-flex items-center">
                 <span className="flex-grow flex flex-col">
-                  <span className="font-bold text-darkSecondary">Yordi</span>
+                  <span className="font-bold text-darkSecondary">Yordanos Dinku</span>
                 </span>
               </a>
             </div>

@@ -64,29 +64,39 @@ const Detail = () => {
 
                             <div className='grid grid-cols-2 mb-3'>
                                 <div className="mb-4 ">
-                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Sleeve design</span>
+                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Sleeve Length</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-700 text-lg">{data[productNo].Sleevedesign || "-"}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Sleevelength || "-"}</span>
                                     </div>
                                 </div>
                                 <div className="mb-4 ">
-                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Size</span>
+                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Length</span>
 
                                     <div className="flex flex-wrap">
-                                        <span className="text-gray-700 text-lg">{data[productNo].Size || "-"}</span>
+                                        <span className="text-gray-700 text-lg">{data[productNo].Length || "-"}</span>
                                     </div>
                                 </div>
                             </div>
 
                             <div className='grid grid-cols-2 mb-3'>
                                 <div className="mb-4 ">
-                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Fit type</span>
+                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Waist</span>
+
+                                    <div className="flex flex-wrap">
+                                        <span className="text-gray-700 text-lg">{data[productNo].Waist || "-"}</span>
+                                    </div>
+                                </div>
+                                <div className="mb-4 ">
+                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Fit Type</span>
 
                                     <div className="flex flex-wrap">
                                         <span className="text-gray-700 text-lg">{data[productNo].Fittype || "-"}</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className='grid grid-cols-2'>
                                 <div className="mb-4 ">
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Fabric</span>
 
@@ -94,9 +104,6 @@ const Detail = () => {
                                         <span className="text-gray-700 text-lg">{data[productNo].Fabric || "-"}</span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className='grid grid-cols-2'>
                                 <div className="mb-4 ">
                                     <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Color</span>
 
@@ -104,12 +111,13 @@ const Detail = () => {
                                         <span className="text-gray-700 text-lg">{data[productNo].Color || "-"}</span>
                                     </div>
                                 </div>
-                                <div className="mb-4 ">
-                                    <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Type</span>
+                            </div>
 
-                                    <div className="flex flex-wrap">
-                                        <span className="text-gray-700 text-lg">{data[productNo].Type || "-"}</span>
-                                    </div>
+                            <div className="mb-4 ">
+                                <span className="inline-block text-darkSecondary text-lg font-semibold mb-1">Type</span>
+
+                                <div className="flex flex-wrap">
+                                    <span className="text-gray-700 text-lg">{data[productNo].Type || "-"}</span>
                                 </div>
                             </div>
 

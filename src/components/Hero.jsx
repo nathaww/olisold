@@ -55,24 +55,24 @@ const Hero = () => {
                         </span>
                         <div className='overflow-hidden pt-2'>
                             <h1 ref={el => h1 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                Find The Best
+                                Oli's Is Ready
                             </h1>
                         </div>
                         <div className='overflow-hidden pt-2'>
                             <h1 ref={el => h2 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                Fashion Style
+                                To Knit You
                             </h1>
                         </div>
                         <div className='overflow-hidden pt-2'>
                             <h1 ref={el => h3 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                For You
+                                Together
                             </h1>
                         </div>
 
 
-                        <p className="my-3 lg:mb-6 text-base leading-relaxed text-left w-[80%] text-gray-600">We hope to grow the
-                            business from making clothes for clients in Ethiopia to exporting our beautiful creative attires to other
-                            countries in Africa and the world at large.</p>
+                        <p className="my-3 lg:mb-6 text-base leading-relaxed text-left w-[80%] text-gray-600">Oli's is a handmade product that has been in the work for over five years,
+                            a product that we have put our blood sweat and tears into. After years of toiling and perfecting our product,
+                            we have now come to the stage where we want to share this passion with the world. </p>
 
 
                         <div className="mt-3 lg:mt-3 max-w-7xl sm:flex">
@@ -88,7 +88,7 @@ const Hero = () => {
                                 <div className="relative">
                                     <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20' src={vector} alt="" />
                                     <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20' src={vector} alt="" />
-                                    <video className='rounded-bl-[4rem] w-full' muted autoPlay loop playsinline>
+                                    <video className='rounded-bl-[4rem] w-full' muted autoPlay loop playsInline>
                                         <source src={Olisvid2} type="video/mp4" />
                                     </video>
                                 </div>
