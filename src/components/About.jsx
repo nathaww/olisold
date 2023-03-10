@@ -44,7 +44,7 @@ const About = () => {
         </div>
         <div ref={el => sec = el} className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <div className='overflow-hidden my-4'>
-            <h1 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold">A few things about Oli's</h1>
+            <h1 ref={el => h1 = el} className="text-darkSecondary text-center text-3xl lg:text-4xl font-bold">About us</h1>
           </div>
           <p ref={el => p = el} className="px-2 leading-relaxed text-lg text-left">
             Oli's wants you all to know that our homemade products are ready to dress you in homemade love.

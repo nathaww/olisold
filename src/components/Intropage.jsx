@@ -18,22 +18,19 @@ const Intropage = () => {
     );
 
     useEffect(() => {
-        timeline_intro.from([box1, textIntro],
+        timeline_intro.from([textIntro],
             {
                 duration: 1.5,
                 y: '150%',
                 stagger: 0.3
-            }), timeline_intro.to(box1, {
-                height: 0,
-                duration: 1.8,
             }), timeline_intro.to([textIntro], {
+                y: '-150%',
                 autoAlpha: 0,
-                delay: -1.5,
                 duration: 1.5,
             }), timeline_intro.to([bgIntro, cont], {
                 height: 0,
-                delay: -1.5,
-                duration: 1.5,
+                delay: -1,
+                duration: 1,
             })
         timeline_intro.timeScale(0.6)
     })
@@ -42,9 +39,7 @@ const Intropage = () => {
         <div className='overflow-hidden'>
             <div ref={el => bgIntro = el} className='w-full h-full flex fixed inset-0 justify-center flex-col items-center z-50 bg-darkSecondary'>
                 <div ref={el => cont = el} className="containerIntro overflow-hidden absolute w-[320px] h-[320px] left-[50%] top-[50%]">
-                    <div ref={el => box1 = el} className=" rounded overflow-hidden absolute w-full h-full -z-10 flex justify-center items-center">
-                        <img ref={el => textIntro = el} src={oli} className="object-cover object-center w-full h-full" alt="oli's logo" />
-                    </div>
+                    <img ref={el => textIntro = el} src={oli} className="object-cover object-center w-full h-full" alt="oli's logo" />
                 </div>
             </div>
         </div>

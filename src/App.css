@@ -2,6 +2,10 @@
   font-family: "Runalto";
   src: url(../src/assets/FontsFree-Net-Canela-Regular.ttf);
 }
+.b {
+  filter: blur(106px);
+  transform: translate3d(0, 0, 0);
+}
 .modal {
   transform: translate(-50%, -50%) !important;
 }
@@ -21,5 +25,3 @@
 .containerIntro {
   transform: translate(-50%, -50%);
 }
-
-

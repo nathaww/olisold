@@ -13,23 +13,32 @@ const Hero = () => {
     let h3 = useRef(null)
     let vector1 = useRef(null)
     let vector2 = useRef(null)
+    let glass = useRef(null)
 
     const timeline_intro = gsap.timeline();
 
     useEffect(() => {
         timeline_intro.from([h1, h2, h3],
             {
-                delay: 3.9,
+                delay: 3.4,
                 duration: 1,
                 skewY: 8,
                 yPercent: 130,
                 stagger: 0.2,
                 ease: "back.out",
-            }), timeline_intro.from([vector1, vector2],
+            }), timeline_intro.fromTo(glass, {
+                y: -290,
+                duration: .8,
+            }, {
+                y: 300,
+                height: 0,
+                duration: .8,
+            }
+            ), timeline_intro.from([vector1, vector2],
                 {
                     delay: -1.4,
-                    duration: 1.5,
-                    opacity: 0,
+                    duration: 1,
+                    autoAlpha: 0,
                     x: 20,
                     ease: 'expo.inOut',
                     stagger:
@@ -41,7 +50,7 @@ const Hero = () => {
     })
 
     return (
-        <section className='bg-primary relative'>
+        <section className='bg-white relative'>
             <img className='absolute w-full -z-0 bottom-0' src={vectoralt} alt="olis vector" />
             <Navbar />
             <div className="pb-2 px-3 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-6">
@@ -53,24 +62,28 @@ const Hero = () => {
                         <span className="mb-3 text-xs font-bold tracking-widest text-darkPrimary uppercase">
                             You knit me together
                         </span>
-                        <div className='overflow-hidden pt-2'>
-                            <h1 ref={el => h1 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                Oli's Is Ready
-                            </h1>
-                        </div>
-                        <div className='overflow-hidden pt-2'>
-                            <h1 ref={el => h2 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                To Knit You
-                            </h1>
-                        </div>
-                        <div className='overflow-hidden pt-2'>
-                            <h1 ref={el => h3 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
-                                Together
-                            </h1>
+                        <div className="overflow-hidden relative">
+
+                            <div ref={el => glass = el} className='absolute w-full h-[80%] skew-y-12 opacity-70 bg-primary z-10' />
+
+                            <div className='overflow-hidden pt-2'>
+                                <h1 ref={el => h1 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
+                                    Oli's Is Ready
+                                </h1>
+                            </div>
+                            <div className='overflow-hidden pt-2'>
+                                <h1 ref={el => h2 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
+                                    To Knit You
+                                </h1>
+                            </div>
+                            <div className='overflow-hidden pt-2'>
+                                <h1 ref={el => h3 = el} className="hometext text-5xl sm:text-6xl font-bold leading-none text-darkSecondary md:text-7xl lg:text-7xl">
+                                    Together
+                                </h1>
+                            </div>
                         </div>
 
-
-                        <p className="my-3 lg:mb-6 text-base leading-relaxed text-left w-[80%] text-gray-600">Oli's is a handmade product that has been in the work for over five years,
+                        <p className="my-3 lg:mb-6 text-base leading-relaxed text-left w-[80%] text-gray-500">Oli's is a handmade product that has been in the work for over five years,
                             a product that we have put our blood sweat and tears into. After years of toiling and perfecting our product,
                             we have now come to the stage where we want to share this passion with the world. </p>
 
@@ -86,6 +99,10 @@ const Hero = () => {
                         <div>
                             <div className="w-full max-w-lg">
                                 <div className="relative">
+
+                                    <div className="absolute top-0 rounded-full bg-darkSecondary -left-4 w-40 h-40 lg:w-72 lg:h-72 mix-blend-multiply b opacity-60"></div>
+                                    <div className="absolute hidden lg:flex rounded-full bg-darkSecondary -bottom-24 right-20 w-60 h-60 mix-blend-multiply b opacity-50"></div>
+
                                     <img ref={el => vector1 = el} className='absolute hidden lg:flex bottom-0 lg:-bottom-10 -left-10 w-22 h-20' src={vector} alt="" />
                                     <img ref={el => vector2 = el} className='absolute -top-10 right-0 lg:-right-10 w-22 h-20' src={vector} alt="" />
                                     <video className='rounded-bl-[4rem] w-full' muted autoPlay loop playsInline>
